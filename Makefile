@@ -1,11 +1,18 @@
-.PHONY: all dark light
+.PHONY: all dark light install clean
 
 all:
 	git submodule update --init
 	bundle install --path ./.gem
+	mkdir -p build/src
 
 dark: all
-	bundle exec ruby i2g.rb material-iterm/material-dark.itermcolors
+	cp material-iterm/material-dark.itermcolors build/src/theme.itermcolors
 
 light: all
-	bundle exec ruby i2g.rb material-iterm/material.itermcolors
+	cp material-iterm/material.itermcolors build/src/theme.itermcolors
+
+install:
+	bundle exec ruby ./i2g.rb ./build/src/theme.itermcolors
+
+clean:
+	rm -rf ./.gem build
