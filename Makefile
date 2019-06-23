@@ -1,6 +1,7 @@
 .PHONY: all dark light
 
 all:
+	git submodule update --init
 	bundle install --path ./.gem
 
 dark: all
