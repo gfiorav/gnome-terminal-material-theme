@@ -1,4 +1,4 @@
-# gnome-terminal-material-theme
+# Material Theme for the GNOME Terminal
 This is a spiritual fork of https://github.com/stoeffel/material-iterm, but for the GNOME Terminal
 
 ## Requirements
