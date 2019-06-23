@@ -1,0 +1,3 @@
+[submodule "material-iterm"]
+	path = material-iterm
+	url = https://github.com/stoeffel/material-iterm
